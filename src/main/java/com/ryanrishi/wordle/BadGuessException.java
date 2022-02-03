@@ -1,4 +1,4 @@
-package com.ryanrishi;
+package com.ryanrishi.wordle;
 
 /**
  * Something that shouldn't stop the game, just something wrong with your guess.

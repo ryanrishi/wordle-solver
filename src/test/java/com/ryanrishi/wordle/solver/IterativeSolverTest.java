@@ -1,5 +1,6 @@
-package com.ryanrishi;
+package com.ryanrishi.wordle.solver;
 
+import com.ryanrishi.wordle.Wordle;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

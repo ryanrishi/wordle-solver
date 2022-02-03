@@ -1,4 +1,4 @@
-package com.ryanrishi;
+package com.ryanrishi.wordle;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

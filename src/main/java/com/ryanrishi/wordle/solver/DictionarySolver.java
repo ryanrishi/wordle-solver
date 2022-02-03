@@ -1,4 +1,4 @@
-package com.ryanrishi;
+package com.ryanrishi.wordle.solver;
 
 import java.io.IOException;
 import java.io.InputStream;

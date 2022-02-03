@@ -1,5 +1,7 @@
-package com.ryanrishi;
+package com.ryanrishi.wordle.solver;
 
+import com.ryanrishi.wordle.LetterGuess;
+import com.ryanrishi.wordle.Wordle;
 import lombok.NoArgsConstructor;
 
 import java.util.*;

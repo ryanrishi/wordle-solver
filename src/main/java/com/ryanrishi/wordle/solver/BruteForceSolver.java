@@ -1,4 +1,6 @@
-package com.ryanrishi;
+package com.ryanrishi.wordle.solver;
+
+import com.ryanrishi.wordle.Wordle;
 
 public class BruteForceSolver extends DictionarySolver {
     @Override

@@ -1,4 +1,4 @@
-package com.ryanrishi;
+package com.ryanrishi.wordle;
 
 import org.junit.jupiter.api.Test;
 
