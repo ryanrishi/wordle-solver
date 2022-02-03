@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>wordle-solver</name>
-    <url>https://ryanrishi.com/blog/solving-wordle</url>
+    <url>https://ryanrishi.com/blog/2022-01-31-solving-wordle</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
