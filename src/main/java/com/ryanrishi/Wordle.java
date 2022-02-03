@@ -14,7 +14,7 @@ public class Wordle {
 
     @Getter
     @Setter
-    private boolean debug = false;
+    private boolean debug = true;
 
     @Getter
     private int numGuesses = 0;

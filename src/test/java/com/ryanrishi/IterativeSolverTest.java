@@ -21,7 +21,6 @@ public class IterativeSolverTest {
     void testIterative_seedDoesNotContainAnyLettersInAnswer() {
         String answer = "robot";
         Wordle wordle = new Wordle(answer);
-        wordle.setDebug(true);
         Solver solver = new IterativeSolver(Collections.singletonList("adieu"));
         assertEquals(answer, solver.solve(wordle));
         System.out.println("iterative (bad seed): " + wordle.getNumGuesses());
@@ -31,7 +30,6 @@ public class IterativeSolverTest {
     void testIterative_multipleOccurrencesOfSameLetter() {
         String answer = "feeds";
         Wordle wordle = new Wordle(answer);
-        wordle.setDebug(true);
         Solver solver = new IterativeSolver(Collections.singletonList("guess"));
         assertEquals(answer, solver.solve(wordle));
         System.out.println("iterative (multiple occurrences of same letter): " + wordle.getNumGuesses());
@@ -77,7 +75,6 @@ public class IterativeSolverTest {
     void test20220129_iterative_badSeed() {
         String answer = "could";
         Wordle wordle = new Wordle(answer);
-        wordle.setDebug(true);
         Solver solver = new IterativeSolver(Arrays.asList("ables", "peril"));
         assertEquals(answer, solver.solve(wordle));
         System.out.println("2022-01-29 (iterative, bad seed): " + wordle.getNumGuesses());
@@ -87,7 +84,6 @@ public class IterativeSolverTest {
     void test20220129_iterative_goodSeed() {
         String answer = "could";
         Wordle wordle = new Wordle(answer);
-        wordle.setDebug(true);
         Solver solver = new IterativeSolver(Collections.singletonList("about"));
         assertEquals(answer, solver.solve(wordle));
         System.out.println("2022-01-29 (iterative, good seed): " + wordle.getNumGuesses());
@@ -97,7 +93,6 @@ public class IterativeSolverTest {
     void test226_iterative_goodSeed() {
         String answer = "light";
         Wordle wordle = new Wordle(answer);
-        wordle.setDebug(true);
         Solver solver = new IterativeSolver(Collections.singletonList("cough"));
         assertEquals(answer, solver.solve(wordle));
         System.out.println("226 (iterative, good seed): " + wordle.getNumGuesses());
@@ -107,7 +102,6 @@ public class IterativeSolverTest {
     void test226_iterative_badSeed() {
         String answer = "light";
         Wordle wordle = new Wordle(answer);
-        wordle.setDebug(true);
         Solver solver = new IterativeSolver(Collections.singletonList("about"));
         assertEquals(answer, solver.solve(wordle));
         System.out.println("226 (iterative, bad seed): " + wordle.getNumGuesses());
@@ -117,9 +111,26 @@ public class IterativeSolverTest {
     void test226_iterative() {
         String answer = "light";
         Wordle wordle = new Wordle(answer);
-        wordle.setDebug(true);
         Solver solver = new IterativeSolver();
         assertEquals(answer, solver.solve(wordle));
         System.out.println("226 (iterative): " + wordle.getNumGuesses());
+    }
+
+    @Test
+    void testTight_iterative() {
+        String answer = "tight";
+        Wordle wordle = new Wordle(answer);
+        Solver solver = new IterativeSolver();
+        assertEquals(answer, solver.solve(wordle));
+        System.out.println("tight (iterative): " + wordle.getNumGuesses());
+    }
+
+    @Test
+    void testTight_iterative_badSeed() {
+        String answer = "tight";
+        Wordle wordle = new Wordle(answer);
+        Solver solver = new IterativeSolver(Collections.singletonList("light"));
+        assertEquals(answer, solver.solve(wordle));
+        System.out.println("tight (iterative, bad seed): " + wordle.getNumGuesses());
     }
 }

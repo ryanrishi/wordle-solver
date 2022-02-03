@@ -9,7 +9,7 @@ public class BruteForceSolverTest {
     void testBruteForce_about() {
         String answer = "about";
         Wordle wordle = new Wordle(answer);
-        wordle.setDebug(true);
+        wordle.setDebug(false);
         Solver solver = new BruteForceSolver();
         assertEquals(answer, solver.solve(wordle));
         System.out.println("brute force: " + wordle.getNumGuesses());
@@ -19,7 +19,7 @@ public class BruteForceSolverTest {
     void testBruteForce_zorro() {
         String answer = "zorro";
         Wordle wordle = new Wordle(answer);
-        wordle.setDebug(true);
+        wordle.setDebug(false);
         Solver solver = new BruteForceSolver();
         assertEquals(answer, solver.solve(wordle));
         System.out.println("brute force: " + wordle.getNumGuesses());
