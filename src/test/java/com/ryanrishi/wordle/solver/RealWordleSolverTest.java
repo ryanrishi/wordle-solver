@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * Uses list of real Wordle solutions to test each solver
  */
-public class RealWordleSolver {
+public class RealWordleSolverTest {
     Set<String> words = new LinkedHashSet<>();
 
     @ParameterizedTest
